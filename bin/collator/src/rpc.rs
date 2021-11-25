@@ -91,6 +91,7 @@ where
         + pallet_transaction_payment_rpc::TransactionPaymentRuntimeApi<Block, Balance>
         + fp_rpc::EthereumRuntimeRPCApi<Block>
         + BlockBuilder<Block>,
+    C::Api: pallet_ibc_runtime_api::IbcApi<Block>,
     P: TransactionPool<Block = Block> + Sync + Send + 'static,
     T: fp_rpc::ConvertTransaction<sp_runtime::OpaqueExtrinsic> + Sync + Send + 'static,
     BE: Backend<Block> + 'static,
@@ -179,6 +180,10 @@ where
         ),
         overrides,
     )));
+
+    io.extend_with(pallet_ibc_rpc::IbcApi::to_delegate(
+        pallet_ibc_rpc::IbcStorage::new(client.clone()),
+    ));
 
     io
 }

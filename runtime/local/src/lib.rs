@@ -539,6 +539,18 @@ impl pallet_sudo::Config for Runtime {
     type Event = Event;
     type Call = Call;
 }
+// The ModuleCallbacksImpl creates a static mapping of module index and callback functions of other modules.
+// The module index is determined at the time of construct_runtime. For example,
+// the index of TemplateModule is 8 in the current runtime.
+// In the future, we should find a more dynamic way to create this mapping.
+pub struct ModuleCallbacksImpl;
+
+impl pallet_ibc::ModuleCallbacks for ModuleCallbacksImpl {}
+
+impl pallet_ibc::Config for Runtime {
+    type Event = Event;
+    type ModuleCallbacks = ModuleCallbacksImpl;
+}
 
 construct_runtime!(
     pub enum Runtime where
@@ -562,6 +574,8 @@ construct_runtime!(
         EthCall: pallet_custom_signatures::{Pallet, Call, Event<T>, ValidateUnsigned},
         Contracts: pallet_contracts::{Pallet, Call, Storage, Event<T>},
         Sudo: pallet_sudo::{Pallet, Call, Config<T>, Storage, Event<T>},
+        // pallet ibc
+		Ibc: pallet_ibc::{Pallet, Call, Storage, Event<T>},
     }
 );
 
@@ -904,6 +918,38 @@ impl_runtime_apis! {
             Contracts::get_storage(address, key)
         }
     }
+
+
+    // Here we implement our custom runtime API.
+	impl  pallet_ibc_runtime_api::IbcApi<Block> for Runtime {
+		// get identifiedAnyClientState
+		fn get_identified_any_client_state() -> Vec<(Vec<u8>, Vec<u8>)> {
+
+			Ibc::get_identified_any_client_state()
+		}
+
+		fn get_idenfitied_connection_end() -> Vec<(Vec<u8>, Vec<u8>)> {
+
+			Ibc::get_idenfitied_connection_end()
+		}
+
+		fn get_idenfitied_channel_end() -> Vec<(Vec<u8>, Vec<u8>, Vec<u8>)> {
+
+			Ibc::get_idenfitied_channel_end()
+		}
+
+		// get_packet_commitment_state()
+		fn get_packet_commitment_state() -> Vec<(Vec<u8>, Vec<u8>, Vec<u8>, Vec<u8>)> {
+
+			Ibc::get_packet_commitment_state()
+		}
+
+		// get_packet_acknowledge_state()
+		fn get_packet_acknowledge_state() -> Vec<(Vec<u8>, Vec<u8>, Vec<u8>, Vec<u8>)> {
+
+			Ibc::get_packet_acknowledge_state()
+		}
+	}
 
     #[cfg(feature = "runtime-benchmarks")]
     impl frame_benchmarking::Benchmark<Block> for Runtime {
