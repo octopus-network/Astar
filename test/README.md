@@ -29,7 +29,7 @@ cargo build --release
 
 ### Configure testnet
 
-Create an `.env` file with variables that point to the binaries for polkadot and adder-collator
+Create an `.env` file with variables that point to the binaries for polkadot
 
 Example:
 ```
