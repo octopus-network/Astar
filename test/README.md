@@ -1,0 +1,60 @@
+# Local Testnet
+
+## Requirements
+* `timeout` - native package on Ubuntu, on macOS try ```brew install coreutils```
+* `jq` - https://stedolan.github.io/jq/download/
+* sponge - Is available in the moreutils package. On Mac see https://formulae.brew.sh/formula/moreutils. On Linux:
+
+  ```bash
+  apt install moreutils
+  ```
+
+* polkadot-launch
+
+  ```bash
+  yarn global add polkadot-launch
+  ```
+
+## Setup
+
+### Polkadot
+
+Example:
+```bash
+git clone -n https://github.com/paritytech/polkadot.git
+git checkout v0.9.13-rc1
+./scripts/init.sh
+cargo build --release
+```
+
+### Configure testnet
+
+Create an `.env` file with variables that point to the binaries for polkadot and adder-collator
+
+Example:
+```
+POLKADOT_BIN=/path/to/polkadot/target/release/polkadot
+```
+
+## Launch the testnet
+
+Run the following script
+```bash
+scripts/start-services.sh
+```
+
+Wait until the "System has been initialized" message
+
+Go to polkadot-js and wait until the parachain has started producing blocks:
+https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A11144#/explorer
+
+You can see the relay chain by connecting to https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
+
+Confirm the block number is > 2
+
+### Troubleshooting
+
+The `start-services.sh` script writes the following logs:
+
+- Parachain nodes: /tmp/snowbridge/{alice,bob,11144,11155}.log
+- Relay services: /tmp/snowbridge/{beefy,parachain,ethereum}-relay.log
