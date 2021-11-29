@@ -12,7 +12,13 @@
 * polkadot-launch
 
   ```bash
-  yarn global add polkadot-launch
+  yarn global remove polkadot-launch
+  git clone https://github.com/octopus-network/polkadot-launch.git
+  cd polkadot-launch
+  git checkout 92751e9ff833e89a100d553ae4d9b6452e8aa82f 
+  yarn install
+  yarn build
+  yarn global add file:$(pwd)
   ```
 
 ## Setup
