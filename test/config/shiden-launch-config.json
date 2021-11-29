@@ -41,6 +41,7 @@
 		{
 			"bin": "/bin/astar-collator",
 			"id": "2007",
+			"chain": "shiden-dev",
 			"balance": "1000000000000000000000",
 			"nodes": [
 				{

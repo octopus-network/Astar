@@ -19,17 +19,13 @@ start_polkadot_launch()
     cargo build --release
     cd test
 
-    echo "Generating chain specification"
-#    "$parachain_bin" build-spec --disable-default-bootnode > "$output_dir/spec.json"
-    "$parachain_bin" build-spec > "$output_dir/spec.json"
-
     jq \
         --arg polkadot "$(realpath $POLKADOT_BIN)" \
         --arg bin "$parachain_bin" \
         ' .relaychain.bin = $polkadot
         | .parachains[0].bin = $bin
         ' \
-        config/launch-config.json \
+        config/shiden-launch-config.json \
         > "$output_dir/launch-config.json"
 
      cat "$output_dir/launch-config.json"
