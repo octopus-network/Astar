@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+killall polkadot
+killall astar-collator
+
 set -eu
 
 root_dir="$(realpath ..)"
@@ -30,7 +33,7 @@ start_polkadot_launch()
 
      cat "$output_dir/launch-config.json"
     polkadot-launch "$output_dir/launch-config.json" &
-    scripts/wait-for-it.sh -t 120 localhost:11144
+    scripts/wait-for-it.sh -t 120 localhost:9944
 }
 
 cleanup() {
