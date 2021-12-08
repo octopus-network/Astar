@@ -119,6 +119,9 @@ try-runtime-cli = { git = "https://github.com/paritytech/substrate", branch = "p
 pallet-ibc-rpc = { git = "https://github.com/octopus-network/substrate-ibc", branch = "dv-ibc-dev-0.9.12-tag", default-features = false}
 pallet-ibc-runtime-api = { git = "https://github.com/octopus-network/substrate-ibc", branch = "dv-ibc-dev-0.9.12-tag", default-features = false}
 
+#pallet-ibc-rpc = { path = "../../../substrate-ibc/rpc", default-features = false}
+#pallet-ibc-runtime-api = { path = "../../../substrate-ibc/runtime-api", default-features = false}
+
 
 [build-dependencies]
 sc-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.12", optional = true }
