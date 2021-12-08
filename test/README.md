@@ -25,7 +25,6 @@
 
 ### Polkadot
 
-Example:
 ```bash
 git clone -n https://github.com/paritytech/polkadot.git
 git checkout v0.9.13-rc1
@@ -52,7 +51,7 @@ scripts/start-services.sh
 Wait until the "System has been initialized" message
 
 Go to polkadot-js and wait until the parachain has started producing blocks:
-https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A11144#/explorer
+https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9988#/explorer
 
 You can see the relay chain by connecting to https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
 
@@ -62,5 +61,5 @@ Confirm the block number is > 2
 
 The `start-services.sh` script writes the following logs:
 
-- Parachain nodes: /tmp/snowbridge/{alice,bob,11144,11155}.log
-- Relay services: /tmp/snowbridge/{beefy,parachain,ethereum}-relay.log
+- Parachain nodes: {9944,9955}.log
+- Relay services: {alice,bob,charlie,dave}.log

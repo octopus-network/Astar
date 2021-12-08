@@ -7,25 +7,25 @@
 				"name": "alice",
 				"wsPort": 9944,
 				"port": 30444,
-        "rpcPort": 8888 
+        		"rpcPort": 8888
 			},
 			{
 				"name": "bob",
 				"wsPort": 9955,
 				"port": 30555,
-        "rpcPort": 8877 
+        		"rpcPort": 8877
 			},
 			{
 				"name": "charlie",
 				"wsPort": 9966,
 				"port": 30666,
-        "rpcPort": 8866 
+        		"rpcPort": 8866
 			},
 			{
 				"name": "dave",
 				"wsPort": 9977,
 				"port": 30777,
-        "rpcPort": 8855 
+        		"rpcPort": 8855
 			}
 		],
 		"genesis": {
@@ -49,13 +49,13 @@
 			"balance": "1000000000000000000000",
 			"nodes": [
 				{
-					"wsPort": 9988,
+					"wsPort": 9944,
 					"port": 31200,
 					"name": "alice",
 					"flags": ["--force-authoring", "--unsafe-ws-external", "--unsafe-rpc-external", "--rpc-port=8545", "--rpc-cors=all", "--", "--execution=wasm"]
 				},
 				{
-					"wsPort": 9989,
+					"wsPort": 9955,
 					"port": 31201,
 					"name": "bob",
 					"flags": ["--force-authoring", "--", "--execution=wasm"]
