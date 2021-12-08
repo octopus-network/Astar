@@ -83,11 +83,11 @@ frame-try-runtime = { git = "https://github.com/paritytech/substrate", branch = 
 try-runtime-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.12", default-features = false, optional = true }
 
 # palle ibc
-pallet-ibc = { git = "https://github.com/octopus-network/substrate-ibc", branch = "dv-ibc-dev-0.9.12-tag", default-features = false}
-pallet-ibc-runtime-api = { git = "https://github.com/octopus-network/substrate-ibc", branch = "dv-ibc-dev-0.9.12-tag", default-features = false}
+#pallet-ibc = { git = "https://github.com/octopus-network/substrate-ibc", branch = "dv-ibc-dev-0.9.12-tag", default-features = false}
+#pallet-ibc-runtime-api = { git = "https://github.com/octopus-network/substrate-ibc", branch = "dv-ibc-dev-0.9.12-tag", default-features = false}
 
-#pallet-ibc = { path = "../../../substrate-ibc", default-features = false}
-#pallet-ibc-runtime-api = { path = "../../../substrate-ibc/runtime-api", default-features = false}
+pallet-ibc = { path = "../../../substrate-ibc", default-features = false}
+pallet-ibc-runtime-api = { path = "../../../substrate-ibc/runtime-api", default-features = false}
 
 
 [build-dependencies]

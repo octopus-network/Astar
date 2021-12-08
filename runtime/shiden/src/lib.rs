@@ -1002,6 +1002,10 @@ impl_runtime_apis! {
 			Ibc::get_idenfitied_channel_end()
 		}
 
+        fn get_channel_end(port_id: Vec<u8>, channel_id: Vec<u8>) -> Vec<u8> {
+            Ibc::get_channel_end(port_id, channel_id)
+        }
+
 		// get_packet_commitment_state()
 		fn get_packet_commitment_state() -> Vec<(Vec<u8>, Vec<u8>, Vec<u8>, Vec<u8>)> {
 

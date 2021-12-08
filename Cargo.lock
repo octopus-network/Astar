@@ -3207,7 +3207,7 @@ dependencies = [
 [[package]]
 name = "ibc"
 version = "0.7.3"
-source = "git+https://github.com/octopus-network/ibc-rs.git?branch=dv-update-subxt#98ed117d7acef46733c909475ba3012a023881cb"
+source = "git+https://github.com/octopus-network/ibc-rs.git?branch=dv-update-subxt#0bf2f76e29bc08e02f788567215e38ebb802dde7"
 dependencies = [
  "bytes 1.1.0",
  "chrono",
@@ -3230,7 +3230,7 @@ dependencies = [
 [[package]]
 name = "ibc-proto"
 version = "0.11.0"
-source = "git+https://github.com/octopus-network/ibc-rs.git?branch=dv-update-subxt#98ed117d7acef46733c909475ba3012a023881cb"
+source = "git+https://github.com/octopus-network/ibc-rs.git?branch=dv-update-subxt#0bf2f76e29bc08e02f788567215e38ebb802dde7"
 dependencies = [
  "bytes 1.1.0",
  "informalsystems-prost",
@@ -5695,7 +5695,6 @@ dependencies = [
 [[package]]
 name = "pallet-ibc"
 version = "3.0.0-pre.0"
-source = "git+https://github.com/octopus-network/substrate-ibc?branch=dv-ibc-dev-0.9.12-tag#4b18b8e1e288e4318839397f60f63625616ec06d"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
@@ -5716,7 +5715,6 @@ dependencies = [
 [[package]]
 name = "pallet-ibc-rpc"
 version = "0.1.0"
-source = "git+https://github.com/octopus-network/substrate-ibc?branch=dv-ibc-dev-0.9.12-tag#4b18b8e1e288e4318839397f60f63625616ec06d"
 dependencies = [
  "jsonrpc-core",
  "jsonrpc-core-client",
@@ -5732,7 +5730,6 @@ dependencies = [
 [[package]]
 name = "pallet-ibc-runtime-api"
 version = "0.1.0"
-source = "git+https://github.com/octopus-network/substrate-ibc?branch=dv-ibc-dev-0.9.12-tag#4b18b8e1e288e4318839397f60f63625616ec06d"
 dependencies = [
  "sp-api",
  "sp-std 4.0.0-dev",
@@ -9690,9 +9687,9 @@ checksum = "43b2853a4d09f215c24cc5489c992ce46052d359b5109343cbafbf26bc62f8a3"
 
 [[package]]
 name = "signal-hook"
-version = "0.3.10"
+version = "0.3.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9c98891d737e271a2954825ef19e46bd16bdb98e2746f2eec4f7a4ef7946efd1"
+checksum = "b5a7a75ea6f4a29c7cd5a752ddcfc5453bd5ed97688db68b50698fd3c82f343a"
 dependencies = [
  "libc",
  "signal-hook-registry",
@@ -11297,7 +11294,7 @@ version = "1.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1f559b464de2e2bdabcac6a210d12e9b5a5973c251e102c44c585c71d51bd78e"
 dependencies = [
- "cfg-if 0.1.10",
+ "cfg-if 1.0.0",
  "rand 0.8.4",
  "static_assertions",
 ]
@@ -11467,7 +11464,7 @@ checksum = "e7141e445af09c8919f1d5f8a20dae0b20c3b57a45dee0d5823c6ed5d237f15a"
 dependencies = [
  "bitflags",
  "chrono",
- "rustc_version 0.2.3",
+ "rustc_version 0.4.0",
 ]
 
 [[package]]
