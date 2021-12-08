@@ -5695,6 +5695,7 @@ dependencies = [
 [[package]]
 name = "pallet-ibc"
 version = "3.0.0-pre.0"
+source = "git+https://github.com/octopus-network/substrate-ibc?branch=dv-ibc-dev-0.9.12-tag#8dc0771e29709f13292e6bd5cb0e46389be42fd4"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
@@ -5715,6 +5716,7 @@ dependencies = [
 [[package]]
 name = "pallet-ibc-rpc"
 version = "0.1.0"
+source = "git+https://github.com/octopus-network/substrate-ibc?branch=dv-ibc-dev-0.9.12-tag#8dc0771e29709f13292e6bd5cb0e46389be42fd4"
 dependencies = [
  "jsonrpc-core",
  "jsonrpc-core-client",
@@ -5730,6 +5732,7 @@ dependencies = [
 [[package]]
 name = "pallet-ibc-runtime-api"
 version = "0.1.0"
+source = "git+https://github.com/octopus-network/substrate-ibc?branch=dv-ibc-dev-0.9.12-tag#8dc0771e29709f13292e6bd5cb0e46389be42fd4"
 dependencies = [
  "sp-api",
  "sp-std 4.0.0-dev",
