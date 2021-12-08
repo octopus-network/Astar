@@ -1,27 +1,31 @@
 {
 	"relaychain": {
-		"bin": "/bin/polkadot",
+		"bin": "/Users/davirain/workspace/polkadot/target/release/polkadot",
 		"chain": "rococo-local",
 		"nodes": [
 			{
 				"name": "alice",
-				"wsPort": 9988,
-				"port": 30444
+				"wsPort": 9944,
+				"port": 30444,
+        		"rpcPort": 8888
 			},
 			{
 				"name": "bob",
-				"wsPort": 9999,
-				"port": 30555
+				"wsPort": 9955,
+				"port": 30555,
+        		"rpcPort": 8877
 			},
 			{
 				"name": "charlie",
 				"wsPort": 9966,
-				"port": 30666
+				"port": 30666,
+        		"rpcPort": 8866
 			},
 			{
 				"name": "dave",
 				"wsPort": 9977,
-				"port": 30777
+				"port": 30777,
+        		"rpcPort": 8855
 			}
 		],
 		"genesis": {
@@ -39,7 +43,7 @@
 	},
 	"parachains": [
 		{
-			"bin": "/bin/astar-collator",
+			"bin": "/Users/davirain/workspace/Astar/target/release/astar-collator",
 			"id": "2007",
 			"chain": "shiden-dev",
 			"balance": "1000000000000000000000",
