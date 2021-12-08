@@ -1,5 +1,6 @@
 node_modules
 test-config.json
+.env
 
 *.log
 rococo-local-raw.json
