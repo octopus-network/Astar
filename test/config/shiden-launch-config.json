@@ -5,13 +5,13 @@
 		"nodes": [
 			{
 				"name": "alice",
-				"wsPort": 9944,
+				"wsPort": 9988,
 				"port": 30444,
         		"rpcPort": 8888
 			},
 			{
 				"name": "bob",
-				"wsPort": 9955,
+				"wsPort": 9999,
 				"port": 30555,
         		"rpcPort": 8877
 			},
@@ -49,13 +49,13 @@
 			"balance": "1000000000000000000000",
 			"nodes": [
 				{
-					"wsPort": 9988,
+					"wsPort": 9944,
 					"port": 31200,
 					"name": "alice",
 					"flags": ["--force-authoring", "--unsafe-ws-external", "--unsafe-rpc-external", "--rpc-port=8545", "--rpc-cors=all", "--", "--execution=wasm"]
 				},
 				{
-					"wsPort": 9999,
+					"wsPort": 9955,
 					"port": 31201,
 					"name": "bob",
 					"flags": ["--force-authoring", "--", "--execution=wasm"]
