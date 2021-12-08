@@ -5,13 +5,13 @@
 		"nodes": [
 			{
 				"name": "alice",
-				"wsPort": 9944,
+				"wsPort": 9988,
 				"port": 30444,
         		"rpcPort": 8888
 			},
 			{
 				"name": "bob",
-				"wsPort": 9955,
+				"wsPort": 9999,
 				"port": 30555,
         		"rpcPort": 8877
 			},

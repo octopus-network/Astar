@@ -45,7 +45,9 @@ POLKADOT_BIN=/path/to/polkadot/target/release/polkadot
 
 Run the following script
 ```bash
-scripts/start-services.sh
+cargo build --release
+cd test
+. scripts/start-services.sh
 ```
 
 Wait until the "System has been initialized" message

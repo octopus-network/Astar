@@ -18,9 +18,9 @@ start_polkadot_launch()
     local parachain_bin="$parachain_dir/target/release/astar-collator"
 
     echo "Building parachain node"
-    cd ..
-    cargo build --release
-    cd test
+#    cd ..
+#    cargo build --release
+#    cd test
 
     jq \
         --arg polkadot "$(realpath $POLKADOT_BIN)" \
@@ -32,7 +32,7 @@ start_polkadot_launch()
         > "$output_dir/launch-config.json"
 
      cat "$output_dir/launch-config.json"
-    polkadot-launch "$output_dir/launch-config.json" &
+    RUST_LOG="debug" polkadot-launch "$output_dir/launch-config.json" &
     scripts/wait-for-it.sh -t 120 localhost:9944
 }
 
