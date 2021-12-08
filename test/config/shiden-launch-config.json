@@ -5,13 +5,13 @@
 		"nodes": [
 			{
 				"name": "alice",
-				"wsPort": 9988,
+				"wsPort": 9944,
 				"port": 30444,
         		"rpcPort": 8888
 			},
 			{
 				"name": "bob",
-				"wsPort": 9999,
+				"wsPort": 9955,
 				"port": 30555,
         		"rpcPort": 8877
 			},
@@ -19,13 +19,13 @@
 				"name": "charlie",
 				"wsPort": 9966,
 				"port": 30666,
-        		"rpcPort": 8866
+        			"rpcPort": 8866
 			},
 			{
 				"name": "dave",
 				"wsPort": 9977,
 				"port": 30777,
-        		"rpcPort": 8855
+        			"rpcPort": 8855
 			}
 		],
 		"genesis": {
