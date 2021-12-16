@@ -1,6 +1,5 @@
-# Local Testnet
-
-## Requirements
+### Setup Local Astar/Shiden Network
+#### Requirements
 * `timeout` - native package on Ubuntu, on macOS try ```brew install coreutils```
 * `jq` - https://stedolan.github.io/jq/download/
 * sponge - Is available in the moreutils package. On Mac see https://formulae.brew.sh/formula/moreutils. On Linux:
@@ -18,12 +17,10 @@
   git checkout 92751e9ff833e89a100d553ae4d9b6452e8aa82f 
   yarn install
   yarn build
-  yarn global add file:$(pwd)
+  yarn global add polkadot-launch
   ```
 
-## Setup
-
-### Polkadot
+#### Setup Polkadot
 
 ```bash
 git clone -n https://github.com/paritytech/polkadot.git
@@ -32,20 +29,20 @@ git checkout v0.9.13-rc1
 cargo build --release
 ```
 
-### Configure testnet
+#### Configure for Astar/Shiden Parachain
 
-Create an `.env` file with variables that point to the binaries for polkadot
+Create an `.env` file with variables that point to the binaries for polkadot in the same dir of this README.md.
 
 Example:
 ```
 POLKADOT_BIN=/path/to/polkadot/target/release/polkadot
 ```
 
-## Launch the testnet
+#### Launch the Astar/Shiden Parachain
 
 Run the following script
 ```bash
-cargo build --release
+cargo build --release # in the root dir of this repo
 cd test
 . scripts/start-services.sh
 ```
@@ -57,9 +54,7 @@ https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
 
 You can see the relay chain by connecting to https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9988#/explorer
 
-Confirm the block number is > 2
-
-### Troubleshooting
+#### Logs
 
 The `start-services.sh` script writes the following logs:
 
