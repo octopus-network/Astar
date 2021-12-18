@@ -17,7 +17,7 @@
   git checkout 92751e9ff833e89a100d553ae4d9b6452e8aa82f 
   yarn install
   yarn build
-  yarn global add polkadot-launch
+  yarn global add file:$PWD
   ```
 
 #### Setup Polkadot
