@@ -233,3 +233,12 @@ moonbeam-rpc-txpool = { git = "https://github.com/AstarNetwork/astar-frame", bra
 # Build deps
 substrate-wasm-builder = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
 substrate-build-script-utils = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+
+# ibc
+pallet-ibc = { git = "https://github.com/octopus-network/substrate-ibc.git",  default-features = false, branch = "polkadot-v0.9.37" }
+pallet-ics20-transfer = { git = "https://github.com/octopus-network/substrate-ibc.git",  default-features = false, branch = "polkadot-v0.9.37"}
+ibc-support = { git = "https://github.com/octopus-network/substrate-ibc.git",   default-features = false, branch = "polkadot-v0.9.37" }
+# local dev
+# pallet-ibc = { path = "../../../../../octopus/substrate-ibc/core",  default-features = false }
+# pallet-ics20-transfer = { path = "../../../../../octopus/substrate-ibc/app/ics20-transfer",  default-features = false }
+# ibc-support = { path = "../../../../../octopus/substrate-ibc/support",  default-features = false }

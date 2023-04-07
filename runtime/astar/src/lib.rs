@@ -847,6 +847,18 @@ impl pallet_xc_asset_config::Config for Runtime {
     type WeightInfo = weights::pallet_xc_asset_config::WeightInfo<Self>;
 }
 
+parameter_types! {
+    pub const ExpectedBlockTime: u64 = MILLISECS_PER_BLOCK;
+}
+
+impl pallet_ibc::Config for Runtime {
+    type RuntimeEvent = RuntimeEvent;
+    type TimeProvider = pallet_timestamp::Pallet<Runtime>;
+    type ExpectedBlockTime = ExpectedBlockTime;
+    const IBC_COMMITMENT_PREFIX: &'static [u8] = b"Ibc";
+    type WeightInfo = ();
+}
+
 construct_runtime!(
     pub struct Runtime where
         Block = Block,
@@ -889,6 +901,9 @@ construct_runtime!(
         Contracts: pallet_contracts = 70,
 
         Sudo: pallet_sudo = 99,
+
+        //ibc
+		Ibc: pallet_ibc = 100,
     }
 );
 
