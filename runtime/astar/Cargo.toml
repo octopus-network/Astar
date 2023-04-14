@@ -111,14 +111,10 @@ moonbeam-rpc-primitives-txpool = { workspace = true, optional = true }
 polkadot-runtime = { workspace = true, optional = true }
 
 # ibc
-pallet-ibc = { git = "https://github.com/octopus-network/substrate-ibc.git",  default-features = false, branch = "polkadot-v0.9.39" }
-# pallet-ics20-transfer = { git = "https://github.com/octopus-network/substrate-ibc.git",  default-features = false, branch = "polkadot-v0.9.39"}
-# ibc-support = { git = "https://github.com/octopus-network/substrate-ibc.git",   default-features = false, branch = "polkadot-v0.9.39" }
+pallet-ibc = { workspace = true }
+pallet-ics20-transfer = { workspace = true }
+ibc-support = { workspace = true }
 
-# local dev
-# pallet-ibc = { path = "../../../../../octopus/substrate-ibc/core",  default-features = false }
-# pallet-ics20-transfer = { path = "../../../../../octopus/substrate-ibc/app/ics20-transfer",  default-features = false }
-# ibc-support = { path = "../../../../../octopus/substrate-ibc/support",  default-features = false }
 
 [build-dependencies]
 substrate-wasm-builder = { workspace = true, optional = true }
@@ -202,8 +198,8 @@ std = [
 	"xcm-primitives/std",
 	"substrate-wasm-builder",
 	"pallet-ibc/std",
-	# "pallet-ics20-transfer/std",
-	# "ibc-support/std",
+	"pallet-ics20-transfer/std",
+	"ibc-support/std",
 ]
 runtime-benchmarks = [
 	'frame-benchmarking',

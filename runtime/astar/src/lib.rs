@@ -853,7 +853,7 @@ construct_runtime!(
         Sudo: pallet_sudo = 99,
 
         //ibc
-        Ibc: pallet_ibc = 100,
+        Ibc: pallet_ibc = 110,
     }
 );
 
