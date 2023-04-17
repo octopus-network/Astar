@@ -38,8 +38,8 @@ smallvec = "1.9.0"
 async-trait = "0.1.59"
 clap = { version = "4.0.32", features = ["derive"] }
 futures = { version = "0.3.21" }
-serde = { version = "1.0.151", features = ["derive"] }
-serde_json = "1.0"
+serde = { version = "1.0.151", features = ["derive"], default-features = false }
+serde_json = { version ="1.0", default-features = false }
 tokio = { version = "1.13.0", features = ["macros", "sync"] }
 url = "2.2.2"
 jsonrpsee = { version = "0.16.2", features = ["server"] }
@@ -49,7 +49,7 @@ regex = "1.6.0"
 # Substrate
 # (wasm)
 sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", default-features = false }
-sp-io = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", default-features = false }
+sp-io = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37",default-features = false }
 sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", default-features = false }
 sp-std = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", default-features = false }
 sp-tracing = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", default-features = false }
