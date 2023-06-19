@@ -4142,7 +4142,7 @@ dependencies = [
 [[package]]
 name = "ibc-support"
 version = "0.1.0"
-source = "git+https://github.com/octopus-network/substrate-ibc.git?branch=polkadot-v0.9.37#830a7614281f4f2de02d1eaa1cc45c1a88627c93"
+source = "git+https://github.com/octopus-network/substrate-ibc.git?branch=polkadot-v0.9.37#f7f6ea3235d3be14286b098c1aba6e54cb3be2a9"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
@@ -4150,8 +4150,6 @@ dependencies = [
  "ibc-proto",
  "parity-scale-codec",
  "scale-info",
- "serde",
- "serde_json",
  "sp-runtime",
  "sp-std",
 ]
@@ -7186,7 +7184,7 @@ dependencies = [
 [[package]]
 name = "pallet-ibc"
 version = "4.0.0-dev"
-source = "git+https://github.com/octopus-network/substrate-ibc.git?branch=polkadot-v0.9.37#830a7614281f4f2de02d1eaa1cc45c1a88627c93"
+source = "git+https://github.com/octopus-network/substrate-ibc.git?branch=polkadot-v0.9.37#f7f6ea3235d3be14286b098c1aba6e54cb3be2a9"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
@@ -7209,7 +7207,7 @@ dependencies = [
 [[package]]
 name = "pallet-ics20-transfer"
 version = "4.0.0-dev"
-source = "git+https://github.com/octopus-network/substrate-ibc.git?branch=polkadot-v0.9.37#830a7614281f4f2de02d1eaa1cc45c1a88627c93"
+source = "git+https://github.com/octopus-network/substrate-ibc.git?branch=polkadot-v0.9.37#f7f6ea3235d3be14286b098c1aba6e54cb3be2a9"
 dependencies = [
  "frame-benchmarking",
  "frame-support",

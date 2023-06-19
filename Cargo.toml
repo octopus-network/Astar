@@ -239,7 +239,7 @@ pallet-ibc = { git = "https://github.com/octopus-network/substrate-ibc.git",  de
 pallet-ics20-transfer = { git = "https://github.com/octopus-network/substrate-ibc.git",  default-features = false, branch = "polkadot-v0.9.37"}
 ibc-support = { git = "https://github.com/octopus-network/substrate-ibc.git",   default-features = false, branch = "polkadot-v0.9.37" }
 
-# local ibc dev
+# local  dev
 # pallet-ibc = { version = "4.0.0-dev", path = "../substrate-ibc/core",  default-features = false }
-# pallet-ics20-transfer = { version = "4.0.0-dev", path = "../substrate-ibc/app/ics20-transfer",  default-features = false }
-# ibc-support = {version = "0.1.0", path = "../substrate-ibc/ibc-support",  default-features = false }
+# pallet-ics20-transfer = { version = "4.0.0-dev", path = "../substrate-ibc/app/transfer",  default-features = false }
+# ibc-support = {version = "0.1.0", path = "../substrate-ibc/support",  default-features = false }

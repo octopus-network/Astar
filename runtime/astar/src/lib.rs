@@ -849,13 +849,16 @@ impl pallet_xc_asset_config::Config for Runtime {
 
 parameter_types! {
     pub const ExpectedBlockTime: u64 = MILLISECS_PER_BLOCK;
+    pub const ChainVersion: u64 = 0;
 }
+use ibc_support::module::DefaultRouter;
 
 impl pallet_ibc::Config for Runtime {
     type RuntimeEvent = RuntimeEvent;
     type TimeProvider = pallet_timestamp::Pallet<Runtime>;
     type ExpectedBlockTime = ExpectedBlockTime;
     const IBC_COMMITMENT_PREFIX: &'static [u8] = b"Ibc";
+    type IbcModule = DefaultRouter;
     type WeightInfo = ();
 }
 
@@ -903,7 +906,7 @@ construct_runtime!(
         Sudo: pallet_sudo = 99,
 
         //ibc
-		Ibc: pallet_ibc = 100,
+        Ibc: pallet_ibc = 100,
     }
 );
 
